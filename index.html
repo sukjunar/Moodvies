@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Moodvies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What Movie Should You See</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <form>
-        <input type="text" placeholder="upload image" />
-    </form>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+		<img src="movies.jpg"  alt="navpic" style="100%;">
+      <h1 class="text-center">
+		Moodvies </a>
+		
+      </h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-sm-8">
+        <div class="card">
+          <h5 class="card-header">Upload Photo Here</h5>
+          <div class="card-body" id="">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <h5 class="card-header"><b>Movies You Should Watch</b></h5>
+          <div class="card-body">
+            <div class="input-group mb-3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!--Photo Upload-->
+      <div class="col-sm-8" id="upload">
+      </div>
+<!--Traits list get dumped here-->
+      <div class="col-sm-4" id="info">
+      </div>
+    </div>
+
+
+
+	<div class="row">
+
+		<div class="col-sm-12">
+			<div class="card">
+				<h5 class="card-header">Movie List Based on Traits</h5>
+				<div class="card-body" id="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--movie list gets dumped here-->
+	<div class="col-sm-4" id="info">
+		</div>
+	  </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/app.js"></script>
+
+
 </body>
+
+</html>
 </html>
