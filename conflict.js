@@ -7,3 +7,7 @@ const addButton = function (event) {
     crypto.push(cryptoSelected)
 }
 console.log("wah wah cry cry")
+
+//Sareka testing conflict files
+
+console.log ("This better work")
