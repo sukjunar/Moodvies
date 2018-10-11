@@ -7,8 +7,24 @@
     <title>Moodvies</title>
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="upload image" />
+       
+   
+        <h1> Select a file to upload </h1>
+<form>
+<input type="file" name="fileupload" value="fileupload" id="fileupload">
+
+<br>
+<button type=submit id=submit>
+ Submit
+ </button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>const viewFunction = function () {
+      console.log("submit button was clicked");
+}
+$("#submit").on("click", viewFunction); </script>
     </form>
 </body>
 </html>
