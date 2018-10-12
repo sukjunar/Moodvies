@@ -15,10 +15,10 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-		<img src="movies.jpg"  alt="navpic" style="100%;">
+      <img src="movies.jpg" alt="navpic" style="width : 100%;">
       <h1 class="text-center">
-		Moodvies </a>
-		
+        Moodvies </a>
+
       </h1>
     </div>
   </div>
@@ -41,48 +41,58 @@
           <h5 class="card-header"><b>Movies You Should Watch</b></h5>
           <div class="card-body">
             <div class="input-group mb-3">
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row">
-      <!--Photo Upload-->
-      <div class="col-sm-8" id="upload">
-      </div>
-<!--Traits list get dumped here-->
-      <div class="col-sm-4" id="info">
+  <div class="row">
+    <!--Photo Upload-->
+    <div class="col-sm-8" id="upload">
+      <button></button>
+      <a href="#" id="upload_widget_opener">Upload multiple images</a>
+      </button>
+
+      <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+    </div>
+    <!--Traits list get dumped here-->
+    <div class="col-sm-4" id="info">
+    
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+
+    <div class="col-sm-12">
+      <div class="card">
+        <h5 class="card-header">Movie List Based on Traits</h5>
+        <div class="card-body" id="">
+        </div>
       </div>
     </div>
-
-
-
-	<div class="row">
-
-		<div class="col-sm-12">
-			<div class="card">
-				<h5 class="card-header">Movie List Based on Traits</h5>
-				<div class="card-body" id="">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--movie list gets dumped here-->
-	<div class="col-sm-4" id="info">
-		</div>
-	  </div>
+  </div>
+  <!--movie list gets dumped here-->
+  <div class="col-sm-4" id="info">
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  </div>
+  </div>
 
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-  <script src="./assets/js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  
 
 
 </body>
 
 </html>
+
 </html>
