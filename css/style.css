@@ -1,35 +1,67 @@
-.jumbotron {
-    background-color: #ff0000;
-    border: 4px solid yellow;
+header {
+    width: 100%;
+    background-color:white;
 }
-.card-header {
-    background-color: #ff0000;
-    border: 2px solid yellow;
+.title {
+    font-family: 'K2D', sans-serif;
+    font-size: 3.1rem;
+    margin-left: 600px;
+    color:black;
+    
 }
-.stk {
-    margin: 5px;
+.headerImg {
+    display: inline;
+    height:40px;
+    width: 40px;
 }
-.row {
-    margin-bottom: 10px;
+
+body {
+    background-image: url('./images/dark-grey-terrazzo.png');
+    background-color: red;
+ }
+
+.photoContainer {
+    position: relative;
 }
-h1, {
-    /* color: black;
-    font-size: 100px; */
+
+.placeholder {
+    margin-top: 75px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    height: 380px;
+    width: 380px;
+    margin-left: 300px;
 }
-h5 {
+
+.btn {
+    position: absolute;
+    left: 49%;
+    margin-left: -84px;
+    bottom: 125px;
+    border-radius: 8px;
 
 }
 .container {
-    position: relative;
-    text-align: center;
-    color: black;
-    
+    zoom: 89%;
 }
-.text-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 70px;
-    margin-top: -12%;
+
+.otherAttributes {
+    font-family: 'Varela Round', sans-serif;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid grey;
+    margin-bottom: 25px;
+    text-align: left;
+    height: 150px;
+    width: 100%;
 }
+
+.card {
+    margin: 20px;
+}
+.ourpick {
+   
+    float: right;
+}
+
+
+

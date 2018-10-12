@@ -5,6 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MoodMovies</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/jQueryRotate.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="./app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+  <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   <title>What Movie Should You See</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -12,41 +23,30 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <img src="./images/movies.jpg" alt="navpic" style="width: 100%;">
-      <h1 class="text-center">
-        Moodvies </a>
 
-      </h1>
-    </div>
-  </div>
 
   <div class="container-fluid">
 
+<body>
+  <header>
+    <div class="title">
+      <h1><img src="./images/Movie_reel.ico" class="headerImg"/><b>Moodvies</b><img src="./images/Movie_reel.ico" class="headerImg"/></h1>
+  </header>
+  <div class="container">
     <div class="row">
-
-      <div class="col-sm-8">
-        <div class="card">
-          <h5 class="card-header">Upload Photo Here</h5>
-          <div class="card-body" id="">
-
-          </div>
+      <div class="col s5 photoContainer">
+        <img id="placeholderImage" class="placeholder" src="./images/movie-icon-6.png" />
+        <div class="upload-btn-wrapper">
+          <button type="button" id="widgetLoad" class="btn btn-outline-primary">Upload a Photo</button>
         </div>
       </div>
-
-      <div class="col-sm-4">
-        <div class="card">
-          <h5 class="card-header"><b>Movies You Should Watch</b></h5>
-          <div class="card-body">
-            <div class="input-group mb-3">
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
+  </div>
+
+</body>
+
   </div>
 
   <div class="row">
