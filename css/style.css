@@ -2,12 +2,27 @@ header {
     width: 100%;
     background-color:white;
 }
+#backgroundVid {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -30;
+       
+}
 .title {
     font-family: 'K2D', sans-serif;
     font-size: 3.1rem;
     margin-left: 600px;
     color:black;
     
+}
+#upload_widget_opener {
+   float:right;
+}
+button {
+    float: right;
 }
 .headerImg {
     display: inline;
@@ -21,6 +36,12 @@ body {
  }
 
 .photoContainer {
+    position: relative;
+}
+h1 {
+    margin: 5px;
+}
+.item {
     position: relative;
 }
 
@@ -58,10 +79,18 @@ body {
 .card {
     margin: 20px;
 }
-.ourpick {
-   
-    float: right;
+* {
+    box-sizing: border-box;
 }
-
-
-
+.ourpick {
+   /* float: left; */
+   width: 20%;
+   padding: 5px;
+   position: relative;
+   bottom: 12px;
+}
+.row::after {
+    content:"";
+    clear: both;
+    display: table;
+}
