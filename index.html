@@ -5,82 +5,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>What Movie Should You See</title>
-  <link rel="stylesheet" href="./css/reset.css">
+  <title>MoodMovies</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Varela+Round" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+
+  <script src="./app.js"></script>
+  <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
+
+
 <body>
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <img src="./images/movies.jpg" alt="navpic" style="width: 100%;">
-      <h1 class="text-center">
-        Moodvies </a>
-
-      </h1>
-    </div>
-  </div>
-
   <div class="container-fluid">
 
-    <div class="row">
+    <!--background video-->
+    <iframe src='https://gfycat.com/ifr/FlamboyantHappyArrowcrab' frameborder='0' scrolling='no' allowfullscreen width='100%'
+      id="backgroundVid" height='100%'></iframe>
 
-      <div class="col-sm-8">
-        <div class="card">
-          <h5 class="card-header">Upload Photo Here</h5>
-          <div class="card-body" id="">
+    <!--header with title-->
+    <header>
+      <div class="title">
+        <h1><img src="./images/Movie_reel.ico" class="headerImg" /><b>Moodvies</b><img src="./images/Movie_reel.ico"
+            class="headerImg" /></h1>
+    </header>
 
-          </div>
+    <!--widget button-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8" id="upload">
+          <button>
+            <a href="#" id="upload_widget_opener">Upload multiple images</a>
+          </button>
+          <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
         </div>
       </div>
+    </div>
 
-      <div class="col-sm-4">
-        <div class="card">
-          <h5 class="card-header"><b>Movies You Should Watch</b></h5>
-          <div class="card-body">
-            <div class="input-group mb-3">
+    <!--Section to display the photo back to user-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="card">
+            <h5 class="card-header"><b>Your Photo</b></h5>
+            <div class="card-body" id="userPic">
+            </div>
+          </div>
+        </div>
+
+        <!--Section to display the mood back to the user-->
+        <div class="col-sm-4">
+          <div class="card">
+            <h5 class="card-header"><b>Mood</b></h5>
+            <div class="card-body">
+              <div class="input-group mb-3">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <!--Photo Upload-->
-    <div class="col-sm-8" id="upload">
+    <!--Section to drop the retrieved data-->
+    <div class="row">
+      <!--Photo Upload-->
+      <div class="col-sm-8" id="upload">
+      </div>
+      <!--Traits list get dumped here-->
+      <div class="col-sm-4" id="info">
+      </div>
     </div>
-    <!--Traits list get dumped here-->
+
+    <!-- Section for the movie list based on mood-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <h5 class="card-header"><b>Movie List Based on Mood</b></h5>
+          <div class="card-body" id="userMovie">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--movie list gets dumped here-->
     <div class="col-sm-4" id="info">
     </div>
   </div>
 
-
-
-  <div class="row">
-
-    <div class="col-sm-12">
-      <div class="card">
-        <h5 class="card-header">Movie List Based on Traits</h5>
-        <div class="card-body" id="">
+  <!-- <div class="container container-fluid">
+      <h1>We Recommend:</h1>
+      <div class="row">
+        <div class="column">
+          <img src="https://www.windowsmode.com/wp-content/uploads/2018/02/Black-Panther-2018-Movie-Poster-Wallpaper-300x300.jpg"
+            class="ourPicks" alt="" style="width:100%">
         </div>
-      </div>
-    </div>
-  </div>
-  <!--movie list gets dumped here-->
-  <div class="col-sm-4" id="info">
-  </div>
-  </div>
+        <div class="column">
+          <img src="https://www.filmsxpress.com/images/Carousel/707/CZYRA_NOW%20ON%20SALE_300X300.jpg"
+            class="ourPicks" alt="" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://cdn.pastemagazine.com/www/blogs/lists/2012/04/05/godfather-lead.jpg"
+            class="ourPicks" alt="" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://i2.wp.com/www.filmstaan.com/wp-content/uploads/2018/08/justic-poster.jpg?fit=300%2C300"
+            class="ourPicks" alt="" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://centrestage.org/wp-content/uploads/2018/07/Dreamgirls-1.jpg"
+            class="ourPicks" alt="" style="width:100%">
+        </div> -->
 
-  </div>
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-  <script src="./js/app.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="./js/app.js"></script>
 
 
 </body>
