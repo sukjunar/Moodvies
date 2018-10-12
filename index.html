@@ -16,9 +16,17 @@
   <script src="./app.js"></script>
   <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
   <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-
-
+  <title>What Movie Should You See</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
+
+
+
+  <div class="container-fluid">
 
 <body>
   <header>
@@ -33,17 +41,50 @@
           <button type="button" id="widgetLoad" class="btn btn-outline-primary">Upload a Photo</button>
         </div>
       </div>
-      <!-- <div class="row"> 
-        <div class="col s2">
-          <div class="otherAttributes">
-            <h2>We Recommend </h2>
-          </div>
-        </div>
-      </div> -->
       
     </div>
   </div>
 
 </body>
+
+  </div>
+
+  <div class="row">
+    <!--Photo Upload-->
+    <div class="col-sm-8" id="upload">
+    </div>
+    <!--Traits list get dumped here-->
+    <div class="col-sm-4" id="info">
+    </div>
+  </div>
+
+
+
+  <div class="row">
+
+    <div class="col-sm-12">
+      <div class="card">
+        <h5 class="card-header">Movie List Based on Traits</h5>
+        <div class="card-body" id="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--movie list gets dumped here-->
+  <div class="col-sm-4" id="info">
+  </div>
+  </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="./js/app.js"></script>
+
+
+</body>
+
+</html>
 
 </html>
