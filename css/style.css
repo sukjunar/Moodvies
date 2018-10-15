@@ -1,7 +1,4 @@
-header {
-    width: 100%;
-    background-color:#ff1b1b;
-}
+/* background */
 #backgroundVid {
     background-position: 100%;
     z-index: -300;
@@ -21,84 +18,74 @@ header {
     bottom: 0;
     z-index: 2;    
 }
-.view {
+/* header*/
+.header {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -30;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+    background-image: linear-gradient(black, red);
+    
+  }
+  
+
+/* title name and images*/
 .title {
-    font-family: 'K2D', sans-serif;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 3.1rem;
     margin-left: 600px;
-    color:whitesmoke;
+    color: floralwhite;
+    text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
+    left: 25px;
+    
     
 }
-/* #upload {
-    top: 50px;
-    right: 100px;
- } */
-/* #upload_widget_opener {
-   float:right;
-} */
-button {
-    float: right;
+.header_content-text {
+    font-size: 38px;
 }
 .headerImg {
     display: inline;
-    height:40px;
-    width: 40px;
+    height:65px;
+    width: 65px;
+    padding: 8px;
 }
-
-body {
-    background-image: url('./images/dark-grey-terrazzo.png');
-    background-color: red;
- }
-
-.photoContainer {
+/* button*/
+button {
     position: relative;
 }
-h1 {
-    margin: 5px;
+#upload {
+   position: relative;
+    top: 330px;
+    left: 380px;
 }
-.item {
-    position: relative;
-}
-
-.placeholder {
-    margin-top: 75px;
-    border-radius: 50%;
-    border: 1px solid grey;
-    height: 380px;
-    width: 380px;
-    margin-left: 300px;
-}
-
-.btn {
-    position: absolute;
-    left: 49%;
-    margin-left: -84px;
-    bottom: 125px;
-    border-radius: 8px;
-
-}
-.container {
-    zoom: 89%;
-}
-
-.otherAttributes {
-    font-family: 'Varela Round', sans-serif;
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 1px solid grey;
-    margin-bottom: 25px;
-    text-align: left;
-    height: 150px;
-    width: 100%;
-}
-
+/* each section header and body*/
 .card {
     margin: 20px;
 }
+  /*footer*/
+  footer {
+    height: 50px;
+    position: relative;
+    bottom:0px;
+    width:100%;
+    left: 680px;
+    /* background-image: linear-gradient(black,red, yellow, blue); */
+}
+@media screen and (max-width: 500px) {
+    .header {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+    .title {
+        float: none;
+      display: block;
+      text-align: left;
+    }
   }
