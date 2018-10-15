@@ -101,42 +101,4 @@ h1 {
 .card {
     margin: 20px;
 }
-* {
-    box-sizing: border-box;
-}
-.ourpick {
-   /* float: left; */
-   width: 20%;
-   padding: 5px;
-   position: relative;
-   bottom: 12px;
-}
-.row::after {
-    content:"";
-    clear: both;
-    display: table;
-}
-.carousel {
-    /* any dimensions are fine, it can be responsive with max-width */
-    width: 500px;
-    height: 450px;
-    left: 500px;
-    top: 100px;
-   
-  }
-  
-  .carousel-inner {
-    /* make sure your .items will get correct height */
-    height: 100%;
-  }
-  
-  .item {
-    background-size: cover;
-    background-position: 50% 50%;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .item img {
-    visibility: hidden;
   }
