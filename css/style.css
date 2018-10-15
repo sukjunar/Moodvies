@@ -1,4 +1,7 @@
-/* background */
+header {
+    width: 100%;
+    background-color:#ff1b1b;
+}
 #backgroundVid {
     background-position: 100%;
     z-index: -300;
@@ -18,54 +21,122 @@
     bottom: 0;
     z-index: 2;    
 }
-/* header*/
-.header {
+.view {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    z-index: 10;
-    background-image: linear-gradient(black,red, yellow, blue);
-    
-  }
-  
-
-/* title name and images*/
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -30;
+}
 .title {
-    position: relative;
-    font-family: 'Noto Serif', serif;
+    font-family: 'K2D', sans-serif;
     font-size: 3.1rem;
     margin-left: 600px;
-    color:black;
-    left: 10px;
-    
+    color:whitesmoke;
     
 }
-.header_content-text {
-    font-size: 50px;
+/* #upload {
+    top: 50px;
+    right: 100px;
+ } */
+/* #upload_widget_opener {
+   float:right;
+} */
+button {
+    float: right;
 }
 .headerImg {
     display: inline;
-    height:95px;
-    width: 95px;
+    height:40px;
+    width: 40px;
 }
-/* button*/
-#upload {
+
+body {
+    background-image: url('./images/dark-grey-terrazzo.png');
+    background-color: red;
+ }
+
+.photoContainer {
     position: relative;
-    top: 330px;
-    left: 380px;
 }
-/* each section header and body*/
+h1 {
+    margin: 5px;
+}
+.item {
+    position: relative;
+}
+
+.placeholder {
+    margin-top: 75px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    height: 380px;
+    width: 380px;
+    margin-left: 300px;
+}
+
+.btn {
+    position: absolute;
+    left: 49%;
+    margin-left: -84px;
+    bottom: 125px;
+    border-radius: 8px;
+
+}
+.container {
+    zoom: 89%;
+}
+
+.otherAttributes {
+    font-family: 'Varela Round', sans-serif;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid grey;
+    margin-bottom: 25px;
+    text-align: left;
+    height: 150px;
+    width: 100%;
+}
+
 .card {
     margin: 20px;
 }
-  /*footer*/
-  footer {
-    height: 50px;
-    position: relative;
-    bottom:0px;
-    width:100%;
-    left: 680px;
-    /* background-image: linear-gradient(black,red, yellow, blue); */
+* {
+    box-sizing: border-box;
 }
+.ourpick {
+   /* float: left; */
+   width: 20%;
+   padding: 5px;
+   position: relative;
+   bottom: 12px;
+}
+.row::after {
+    content:"";
+    clear: both;
+    display: table;
+}
+.carousel {
+    /* any dimensions are fine, it can be responsive with max-width */
+    width: 500px;
+    height: 450px;
+    left: 500px;
+    top: 100px;
+   
+  }
+  
+  .carousel-inner {
+    /* make sure your .items will get correct height */
+    height: 100%;
+  }
+  
+  .item {
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .item img {
+    visibility: hidden;
+  }
