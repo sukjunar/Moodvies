@@ -1,3 +1,0 @@
- $('.card').hide();
-display();
-
