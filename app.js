@@ -1,4 +1,3 @@
-
 //Call Cloud Api
 var myUploadWidget;
 document.getElementById("upload_widget_opener").addEventListener("click", function () {
