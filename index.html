@@ -28,22 +28,18 @@
   <video loop muted autoplay id="backgroundVid" height='100%' width='100%' poster="https://tinyurl.com/postermoodvies3-1">
     <source src="https://tinyurl.com/moodvies3-1-mp4" />
   </video>
-  
-  <div class="container-fluid">
+  <div class="container-fluid" id="overlay">
+    
     <!--header with title-->
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1"><img src="./images/Movie_reel.ico" class="headerImg" /><b></b>MOODVIES</b><img src="./images/Movie_reel.ico"
-          class="headerImg" /></span>
-      </nav>
-      
-    <!-- <div class="header">
+    <div class="header">
       <div class="title">
         <h1 class="header_content-text"><img src="./images/Movie_reel.ico" class="headerImg" /><b>MOODVIES</b><img src="./images/Movie_reel.ico"
             class="headerImg" /></h1>
       </div>
-    </div> -->
-
+    </div>
+</header>
     <!--widget button-->
+    <div class="container">
       <div class="row">
         <div class="col-sm-8" id="upload">
           <button>
@@ -52,9 +48,11 @@
           <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
         </div>
       </div>
+    </div>
 
     <!--Section to display the photo back to user-->
-      <!-- <div class="row">
+    <!-- <div class="container">
+      <div class="row">
         <div class="col-sm-8">
           <div class="card">
             <h5 class="card-header"><b>Your Photo</b></h5>
@@ -62,9 +60,10 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
+    </div> -->
     <!--Section to display the mood back to the user-->
-     <!-- <div class="col-sm-4">
+    <!-- <div class="col-sm-4">
       <div class="card">
         <h5 class="card-header"><b>Mood</b></h5>
         <div class="card-body">
@@ -72,7 +71,7 @@
           </div>
         </div>
       </div>
-    </div>  -->
+    </div> -->
 
 
 
@@ -95,7 +94,7 @@
           </div>
         </div>
       </div>
-    </div>  -->
+    </div> -->
 
     <!--movie list gets dumped here-->
     <div class="col-sm-4" id="info">

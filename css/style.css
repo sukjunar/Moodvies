@@ -1,16 +1,25 @@
 /* background */
 #backgroundVid {
-    position: fixed;
+    background-position: 100%;
     z-index: -300;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  left: 50%;
-  transform: translate(-50%);
+  
+}
+#overlay {
+    position: fixed;  
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;    
 }
 /* header*/
-.bg-light {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,13 +32,13 @@
   
 
 /* title name and images*/
-.navbar-light .navbar-brand {
+.title {
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.1rem;
     margin-left: 600px;
     color: floralwhite;
-    /* text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black; */
+    text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     left: 25px;
     
     
@@ -59,9 +68,10 @@ button {
   /*footer*/
   footer {
     height: 50px;
+    position: relative;
     bottom:0px;
     width:100%;
-    text-align: center;
+    left: 680px;
     /* background-image: linear-gradient(black,red, yellow, blue); */
 }
 @media screen and (max-width: 500px) {
@@ -79,4 +89,3 @@ button {
       text-align: left;
     }
   }
- 
