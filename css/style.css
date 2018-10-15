@@ -20,7 +20,6 @@
     background-image: linear-gradient(black, red);
     
   }
-  
 
 /* title name and images*/
 .navbar-light .navbar-brand {
@@ -28,14 +27,15 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.1rem;
     margin-left: 600px;
-    color: floralwhite;
-    /* text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black; */
+    color: white;
     left: 25px;
     
     
 }
 .header_content-text {
     font-size: 38px;
+    color: white;
+    text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
 }
 .headerImg {
     display: inline;
@@ -44,25 +44,23 @@
     padding: 8px;
 }
 /* button*/
-button {
+ button {
     position: relative;
-}
-#upload {
-   position: relative;
-    top: 330px;
-    left: 380px;
-}
-/* each section header and body*/
-.card {
-    margin: 20px;
-}
+    left: 50px;
+    top:260px;
+} 
   /*footer*/
   footer {
-    height: 50px;
+    height: 40px;
     bottom:0px;
     width:100%;
     text-align: center;
-    /* background-image: linear-gradient(black,red, yellow, blue); */
+    flex-shrink: 0;
+    position:relative;
+    bottom: -600px;
+    background-image: linear-gradient(black, red);
+    
+
 }
 @media screen and (max-width: 500px) {
     .header {
