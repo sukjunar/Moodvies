@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moodvies</title>
+  <link rel="icon" href="./images/movie_reel.ico" type="image/jpg" sizes="16x16">
   <!-- ajax libraries-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -32,54 +33,55 @@
 
   <!--Main container-->
   <div class="container-fluid" id="overlay">
-    
-     <!--header with title-->
-     <nav class="navbar navbar-light bg-light">
+
+    <!--header with title-->
+    <nav class="navbar navbar-light bg-light">
       <span class="navbar-brand mb-0 h1">
-          <h1 class="header_content-text"><img src="./images/Movie_reel.ico" class="headerImg" /><b>MOODVIES</b>
-            <img src="./images/Movie_reel.ico" class="headerImg" /></h1></span>
+        <h1 class="header_content-text"><img src="./images/Movie_reel.ico" class="headerImg" /><b>MOODVIES</b>
+          <img src="./images/Movie_reel.ico" class="headerImg" /></h1>
+      </span>
     </nav>
 
- <!-- User photo section-->
- <div class="row">
-  <div class="col-lg-4" id="userPic">
+    <!-- User photo section-->
+    <div class="row">
+      <div class="col-lg-4" id="userPic">
+      </div>
+
+      <!--widget button-->
+      <div class="col-lg-4" id="upload">
+        <button>
+          <a href="#" id="upload_widget_opener"><b>Click to find out your movie genre based on your mood</b></a>
+          <script>$('button').onclick()</script>
+        </button>
+        <!-- piechart div -->
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+      </div>
+
+      <!-- Section to display piechart-->
+      <div class="col-lg-4" id="pieChart">
+      </div>
+
+    </div>
+
+
+    <!--Section to display the main movie pick-->
+    <div class="row">
+      <div class="col-lg-6" id="mainMovie">
+      </div>
+    </div>
+
+    <!-- Section to display the movie list-->
+    <div class="col-lg-6" id="movieList">
+    </div>
+
   </div>
 
-    <!--widget button-->
-        <div class="col-lg-4" id="upload">
-          <button>
-            <a href="#" id="upload_widget_opener"><b>Click to find out your movie genre based on your mood</b></a>
-            <script>$('button').onclick()</script>
-          </button>
-          <!-- piechart div -->
-          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-          <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-        </div>
-    
-<!-- Section to display piechart-->
-<div class="col-lg-4" id="pieChart">
-</div>
+  <!--footer-->
 
-</div>
-
-
-<!--Section to display the main movie pick-->
-<div class="row">
-<div class="col-lg-6" id="mainMovie">
-</div>
-</div>
-
-<!-- Section to display the movie list-->
-<div class="col-lg-6" id="movieList">
-</div>
-
-</div>
-
-<!--footer-->
-
-<footer>
-  <h3>FunkyBunch &copy; 2018</h3>
-</footer>
+  <footer>
+    <h3>FunkyBunch &copy; 2018</h3>
+  </footer>
 
 
 
