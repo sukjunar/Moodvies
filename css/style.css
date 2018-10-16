@@ -41,6 +41,7 @@
     left: 25px;
     
     
+    
 }
 .header_content-text {
     font-size: 38px;
@@ -52,7 +53,7 @@
     display: inline;
     height:65px;
     width: 65px;
-    padding: 8px;
+    padding: 5px;
 }
 /* button*/
 button {
