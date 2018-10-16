@@ -67,11 +67,11 @@ button {
   /*footer*/
   footer {
     height: 50px;
-    position: relative;
-    bottom:0px;
+    position: static;
+    bottom: 0px;
     width:100%;
     text-align: center;
-     background-image: linear-gradient(black, red);
+    background-image: linear-gradient(black, red);
     color: whitesmoke;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     /* background-image: linear-gradient(black,red, yellow, blue); */
