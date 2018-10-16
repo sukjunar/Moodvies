@@ -44,8 +44,6 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
     }
     }, (error, result) => {
         let uploadedImage = (result.info.url);
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
-
         //Call FaceApi
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
@@ -132,6 +130,7 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
         
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
         $('#bg').html("");
         $('#mainMovie').html("");
