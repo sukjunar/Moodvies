@@ -41,6 +41,8 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
     }
     }, (error, result) => {
         const uploadedImage = (result.info.url);
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
+
         //Call FaceApi
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
@@ -116,7 +118,6 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
             })
         };
         faceAPI(uploadedImage);
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
     }), false
 })
 //Call Movie API 
@@ -133,7 +134,7 @@ const displayInfo = function (movieId) {
         $('#mainMovie').html("");
         $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="width:100%" alt="${response.results[0].title}">`);
         $('#mainMovieInfo').html("");
-        $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>SummaryL ${response.results[0].overview}</p>`);
+        $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>Summary: ${response.results[0].overview}</p>`);
 
         })
 }
