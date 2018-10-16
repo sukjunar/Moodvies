@@ -2,10 +2,45 @@
 var myUploadWidget;
 document.getElementById("upload_widget_opener").addEventListener("click", function () {
     myUploadWidget = cloudinary.openUploadWidget({
-        cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset'
+        cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset',
+    sources: [
+        "url",
+        "camera",
+        "facebook",
+        "instagram",
+        "local"
+    ],
+    showAdvancedOptions: false,
+    cropping: true,
+    multiple: false,
+    defaultSource: "local",
+    showCompletedButton: true,
+    styles: {
+        palette: {
+            window: "#ffffff",
+            sourceBg: "#f4f4f5",
+            windowBorder: "#90a0b3",
+            tabIcon: "#000000",
+            inactiveTabIcon: "#555a5f",
+            menuIcons: "#555a5f",
+            link: "#0433ff",
+            action: "#339933",
+            inProgress: "#0433ff",
+            complete: "#339933",
+            error: "#B56363",
+            textDark: "#000000",
+            textLight: "#fcfffd"
+        },
+        fonts: {
+            default: null,
+            "sans-serif": {
+                url: null,
+                active: true
+            }
+        }
+    }
     }, (error, result) => {
         const uploadedImage = (result.info.url);
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
         //Call FaceApi
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
@@ -21,6 +56,29 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
                 const neutral = (response.faces[0].attributes.emotion.neutral);
                 const sadness = (response.faces[0].attributes.emotion.sadness);
                 const surprise = (response.faces[0].attributes.emotion.surprise);
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    title: {
+                        text: "Emotion Results"
+                    },
+                    data: [{
+                        type: "pie",
+                        startAngle: 240,
+                        yValueFormatString: "##0.00\"%\"",
+                        indexLabel: "{label} {y}",
+                        dataPoints: [
+                            { y: anger, label: "Angry" },
+                            { y: disgust, label: "Disgusted" },
+                            { y: fear, label: "Scared" },
+                            { y: happiness, label: "Happy" },
+                            { y: neutral, label: "Neutral" },
+                            { y: sadness, label: "Sad" },
+                            { y: surprise, label: "Surprised" },
+                         ]
+                    }]
+                });
+                chart.render();
 
                 const emotionArray = [anger, disgust, fear, happiness, neutral, sadness, surprise];
                 let max = (Math.max(...emotionArray));
@@ -58,6 +116,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
             })
         };
         faceAPI(uploadedImage);
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
     }), false
 })
 //Call Movie API 
@@ -68,9 +127,11 @@ const displayInfo = function (movieId) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
+        
+        $('#pieChart').html(<div id="chartContainer" style="height: 300px; width: 100%;"></div>)
         $('#bg').html("");
         $('#mainMovie').html("");
-        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" alt="${response.results[0].title}">`);
+        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="width:100%" alt="${response.results[0].title}">`);
         $('#mainMovieInfo').html("");
         $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>SummaryL ${response.results[0].overview}</p>`);
 
