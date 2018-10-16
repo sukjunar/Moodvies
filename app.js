@@ -67,7 +67,7 @@ const displayInfo = function (movieId) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        $('.mainMovie').empty();
-        $('.mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" alt="${response.results[0].title}"><h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>SummaryL ${response.results[0].overview}</p>`);
+        $('#mainMovie').empty();
+        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" alt="${response.results[0].title}"><h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>SummaryL ${response.results[0].overview}</p>`);
         })
 }
