@@ -1,4 +1,7 @@
 //Call Cloud Api
+
+let uploadedImage = (result.info.url);
+
 var myUploadWidget;
 document.getElementById("upload_widget_opener").addEventListener("click", function () {
     myUploadWidget = cloudinary.openUploadWidget({
@@ -40,7 +43,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
         }
     }
     }, (error, result) => {
-        const uploadedImage = (result.info.url);
+        let uploadedImage = (result.info.url);
         $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
 
         //Call FaceApi
