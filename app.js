@@ -68,7 +68,7 @@ const displayInfo = function (movieId) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        $('#backgroundVid').html("");
+        $('#bg').html("");
         $('#mainMovie').html("");
         $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" alt="${response.results[0].title}">`);
         $('#mainMovieInfo').html("");
