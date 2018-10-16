@@ -128,7 +128,7 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
         
-        $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
+        $('#pieChart').html(<div id="chartContainer" style="height: 300px; width: 100%;"></div>)
         $('#bg').html("");
         $('#mainMovie').html("");
         $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="width:100%" alt="${response.results[0].title}">`);
