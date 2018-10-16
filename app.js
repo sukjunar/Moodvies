@@ -5,6 +5,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
         cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset'
     }, (error, result) => {
         const uploadedImage = (result.info.url);
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
         //Call FaceApi
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
@@ -68,8 +69,7 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
         $('#backgroundVid').html();
-        $('#userPic').html()
-        $('#mainMovie').html(`<img src="${uploadedImage}" alt="Uploaded Image">`);
+        $('#mainMovie').html();
         $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" alt="${response.results[0].title}"><h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>SummaryL ${response.results[0].overview}</p>`);
         })
 }
