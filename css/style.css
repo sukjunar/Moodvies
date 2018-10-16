@@ -79,6 +79,7 @@ button {
 
 #mainMovie {
     color: white;
+    background-color: black;
 }
 @media screen and (max-width: 500px) {
     .header {
