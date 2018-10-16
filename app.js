@@ -16,7 +16,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
     showAdvancedOptions: false,
     cropping: true,
     multiple: false,
-    defaultSource: "local",
+    defaultSource: "camera",
     showCompletedButton: true,
     styles: {
         palette: {
@@ -45,6 +45,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
     }, (error, result) => {
         let uploadedImage = (result.info.url);
         //Call FaceApi
+        console.log(uploadedImage);
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
             const queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=Ev9zIZLIwjiT5zSHtXHBYRJTZaaEcHpL&api_secret=lfu6EgDOwcUhGoeM0uVmMi0Io_qM2re_&image_url=" + imageURL + "&return_attributes=emotion";
@@ -130,7 +131,8 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
         
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
+        console.log(uploadedImage);
+        $('#userPic').html(`<img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?cs=srgb&dl=beauty-bloom-blue-67636.jpg&fm=jpg" alt="Uploaded Image" style="width:100%;">`)
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
         $('#bg').html("");
         $('#mainMovie').html("");
