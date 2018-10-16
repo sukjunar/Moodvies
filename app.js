@@ -5,6 +5,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
   myUploadWidget = cloudinary.openUploadWidget({
     cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset'
   }, (error, result) => {
+      console.log(result);
     const uploadedImage = (result.info.url);
 //Call FaceApi
     const faceAPI = function (uploadedImage) {
