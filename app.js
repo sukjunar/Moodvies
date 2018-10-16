@@ -25,47 +25,48 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
         const sadness = (response.faces[0].attributes.emotion.sadness);
         const surprise = (response.faces[0].attributes.emotion.surprise);
 
-        const emotionArray = [anger, disgust,fear,happiness,neutral,sadness,surprise];
-        let max = (Math.max(...emotionArray));
-        const emotionId = emotionArray.indexOf(max);
-        let movieId = "";
-        if (emotionId === 0){
-            $('#info').append(`<p>Angry: ${anger}</p>`);
-            let movieId = 28;
-            displayInfo(movieId);
-        }else if (emotionId === 1){
-            $('#info').append(`<p>Disgusted: ${disgust}<p>`);
-            let movieId = 10749;
-            displayInfo(movieId);
-        }else if (emotionId === 2){
-            $('#info').append(`<p>Scared: ${fear}</p>`);
-            let movieId = 99;
-            displayInfo(movieId);
-        }else if (emotionId === 3){
-            $('#info').append(`<p>Happy: ${happiness}</p>`);
-            let movieId = 53;
-            displayInfo(movieId);
-        }else if (emotionId === 4){
-            $('#info').append(`<p>Neutral: ${neutral}</p>`);
-            let movieId = 14;
-            displayInfo(movieId);
-        }else if (emotionId === 5){ 
-            $('#info').append(`<p>Sad: ${sadness}</p>`);
-            let movieId = 35;
-            displayInfo(movieId);
-        }else{
-            $('#info').append(`<p>Surprised: ${surprise}</p>`);
-            let movieId = 36;
-            displayInfo(movieId);
-        } 
-      })
-    };
-    faceAPI(uploadedImage);
-  }), false})
+                const emotionArray = [anger, disgust, fear, happiness, neutral, sadness, surprise];
+                let max = (Math.max(...emotionArray));
+                const emotionId = emotionArray.indexOf(max);
+                let movieId = "";
+                if (emotionId === 0) {
+                    $('#info').append(`<p>Angry: ${anger}</p>`);
+                    let movieId = 28;
+                    displayInfo(movieId);
+                } else if (emotionId === 1) {
+                    $('#info').append(`<p>Disgusted: ${disgust}<p>`);
+                    let movieId = 10749;
+                    displayInfo(movieId);
+                } else if (emotionId === 2) {
+                    $('#info').append(`<p>Scared: ${fear}</p>`);
+                    let movieId = 99;
+                    displayInfo(movieId);
+                } else if (emotionId === 3) {
+                    $('#info').append(`<p>Happy: ${happiness}</p>`);
+                    let movieId = 53;
+                    displayInfo(movieId);
+                } else if (emotionId === 4) {
+                    $('#info').append(`<p>Neutral: ${neutral}</p>`);
+                    let movieId = 14;
+                    displayInfo(movieId);
+                } else if (emotionId === 5) {
+                    $('#info').append(`<p>Sad: ${sadness}</p>`);
+                    let movieId = 35;
+                    displayInfo(movieId);
+                } else {
+                    $('#info').append(`<p>Surprised: ${surprise}</p>`);
+                    let movieId = 36;
+                    displayInfo(movieId);
+                }
+            })
+        };
+        faceAPI(uploadedImage);
+    }), false
+})
 //Call Movie API 
 const displayInfo = function (movieId) {
     const genreID = movieId
-    const queryURL = `https://api.themoviedb.org/3/discover/movie?api_key=891a6c3da20369ff339fbce34d72464b&with_genres=${genreID}`
+    const queryURL = `https://api.themoviedb.org/3/discover/movie?api_key=891a6c3da20369ff339fbce34d72464b&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=true&page=1&with_genres=${genreID}`
     $.ajax({
         url: queryURL,
         method: 'GET'
