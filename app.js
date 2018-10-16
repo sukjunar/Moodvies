@@ -1,6 +1,6 @@
 //Call Cloud Api
 
-let uploadedImage = (result.info.url);
+let uploadedImage = "";
 
 var myUploadWidget;
 document.getElementById("upload_widget_opener").addEventListener("click", function () {
