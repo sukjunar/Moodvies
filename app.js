@@ -44,7 +44,7 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
     }
     }, (error, result) => {
         let uploadedImage = (result.info.url);
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image">`)
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
 
         //Call FaceApi
         const faceAPI = function (uploadedImage) {
