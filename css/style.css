@@ -55,10 +55,10 @@
 button {
     position: relative;
 }
-#upload {
+/* #upload {
    position: relative;
     top: 330px;
-    left: 380px;
+    left: 380px; */
 }
 /* each section header and body*/
 .card {
