@@ -1,8 +1,6 @@
 //Call Cloud Api
 
 let uploadedImage = "";
-console.log(uploadedImage);
-
 
 var myUploadWidget;
 document.getElementById("upload_widget_opener").addEventListener("click", function () {
@@ -45,14 +43,11 @@ document.getElementById("upload_widget_opener").addEventListener("click", functi
         }
     }
     }, (error, result) => {
-        console.log(uploadedImage);
 
         let uploadedImage = (result.info.url);
         //Call FaceApi
-        console.log(uploadedImage);
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
-            console.log(uploadedImage);
 
             const queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=Ev9zIZLIwjiT5zSHtXHBYRJTZaaEcHpL&api_secret=lfu6EgDOwcUhGoeM0uVmMi0Io_qM2re_&image_url=" + imageURL + "&return_attributes=emotion";
             $.ajax({
@@ -137,9 +132,7 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
         
-        console.log(uploadedImage);
         $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
-        console.log(uploadedImage);
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
         $('#bg').html("");
         $('#mainMovie').html("");
