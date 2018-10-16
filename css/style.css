@@ -19,7 +19,7 @@
     z-index: 2;    
 }
 /* header*/
-.header {
+.bg-light {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,30 +27,33 @@
     height: 55px;
     z-index: 10;
     background-image: linear-gradient(black, red);
+    padding: 10px;
     
   }
-  
 
 /* title name and images*/
-.title {
+.navbar-light .navbar-brand {
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.1rem;
     margin-left: 600px;
-    color: floralwhite;
-    text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
+    color: white;
     left: 25px;
+    
     
     
 }
 .header_content-text {
     font-size: 38px;
+    color: white;
+    text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
+    text-align: center;
 }
 .headerImg {
     display: inline;
     height:65px;
     width: 65px;
-    padding: 8px;
+    padding: 5px;
 }
 /* button*/
 button {
@@ -71,7 +74,11 @@ button {
     position: relative;
     bottom:0px;
     width:100%;
-    left: 680px;
+    text-align: center;
+     background-image: linear-gradient(black, red);
+    color: whitesmoke;
+    text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
+    
     /* background-image: linear-gradient(black,red, yellow, blue); */
 }
 @media screen and (max-width: 500px) {
