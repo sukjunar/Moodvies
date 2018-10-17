@@ -58,6 +58,11 @@ button {
   height: auto;
   
 }
+button.css-1p1djze min-close-btn ml6 pointer BUTTON outline-0 flex-nowrap items-center justify-center pointer fw6 c-menu-icons min-close-btn ml6 pointer {
+   display: none; 
+}
+   
+
 /* #upload {
    position: relative;
     top: 330px;
