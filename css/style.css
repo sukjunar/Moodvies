@@ -75,24 +75,10 @@ button {
   height: 100%;
   
 }
-<<<<<<< HEAD
-button.css-1p1djze min-close-btn ml6 pointer BUTTON outline-0 flex-nowrap items-center justify-center pointer fw6 c-menu-icons min-close-btn ml6 pointer {
-   display: none; 
-}
-   
-
-/* #upload {
-   position: relative;
-    top: 330px;
-    left: 380px; */
-/* } */
-=======
->>>>>>> 8393b482a662cd6059bf9fe4730da2d13a10ad8a
 /* each section header and body*/
 .card {
     margin: 20px;
 }
-
 
   /*footer*/
   footer {
@@ -126,6 +112,10 @@ br {
 #upload_widget_opener {
     text-align: center;
 }
+.poster {
+    height: 5%;
+    width: 5%;
+}
 
 @media screen and (max-width: 500px) {
     .header {
@@ -142,4 +132,3 @@ br {
       text-align: left;
     }
   }
-  
