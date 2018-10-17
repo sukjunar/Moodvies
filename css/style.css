@@ -26,13 +26,17 @@
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.1rem;
+    margin-left: 600px;
     color: white;
+    left: 25px;
 }
 .header_content-text {
     font-size: 38px;
     color: white;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     position: relative;
+    text-align: center;
+    background-image: linear-gradient(black, red);
 }
 .headerImg {
     display: inline;
@@ -40,14 +44,25 @@
     width: 65px;
     padding: 5px;
 }
+p {
+    font-size: 24px;
+}
 /* button*/
+button {
+    height: 100px;
+    padding: 12px;
+    background-color: yellow;
+    border: 2px solid blue;
+}
 #upload {
     background-color: black;
     text-align: center;
+    
 }
 #title {
     text-decoration: none;
     color: white;
+    
 }
 
 /* background */
@@ -60,11 +75,6 @@
   height: 100%;
   
 }
-/* #upload {
-   position: relative;
-    top: 330px;
-    left: 380px; */
-/* } */
 /* each section header and body*/
 .card {
     margin: 20px;
@@ -76,7 +86,7 @@
     height: 50px;  
     width:100%;
     text-align: center;
-    background-image: linear-gradient(black, red);
+    background-image: linear-gradient(red, black);
     color: whitesmoke;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     /* background-image: linear-gradient(black,red, yellow, blue); */
