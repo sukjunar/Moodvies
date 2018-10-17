@@ -3,52 +3,25 @@
 let uploadedImage = "";
 
 var myUploadWidget;
-document.getElementById("upload_widget_opener").addEventListener("click", function () {
-    myUploadWidget = cloudinary.openUploadWidget({
-        cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset',
-    sources: [
-        "url",
-        "camera",
-        "facebook",
-        "instagram",
-        "local"
-    ],
-    showAdvancedOptions: false,
-    cropping: true,
-    multiple: false,
-    defaultSource: "local",
-    showCompletedButton: true,
-    styles: {
-        palette: {
-            window: "#ffffff",
-            sourceBg: "#f4f4f5",
-            windowBorder: "#90a0b3",
-            tabIcon: "#000000",
-            inactiveTabIcon: "#555a5f",
-            menuIcons: "#555a5f",
-            link: "#0433ff",
-            action: "#339933",
-            inProgress: "#0433ff",
-            complete: "#339933",
-            error: "#B56363",
-            textDark: "#000000",
-            textLight: "#fcfffd"
-        },
-        fonts: {
-            default: null,
-            "sans-serif": {
-                url: null,
-                active: true
-            }
-        }
-    }
-    }, (error, result) => {
-        let uploadedImage = (result.info.url);
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
+  document.getElementById("upload_widget_opener").addEventListener("click", function() {
+    myUploadWidget = cloudinary.openUploadWidget({ 
+      cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset'}, (error, result) => { 
 
+        console.log("Result :" , result);
+
+        let uploadedImage = (result.info.url);
+
+        
+        
+
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
         //Call FaceApi
+     
+
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
+            console.log(imageURL);
+
             const queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=Ev9zIZLIwjiT5zSHtXHBYRJTZaaEcHpL&api_secret=lfu6EgDOwcUhGoeM0uVmMi0Io_qM2re_&image_url=" + imageURL + "&return_attributes=emotion";
             $.ajax({
                 url: queryURL,
@@ -132,6 +105,7 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
         
+        // $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
         $('#bg').html("");
         $('#mainMovie').html("");
