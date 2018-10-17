@@ -6,21 +6,14 @@ var myUploadWidget;
   document.getElementById("upload_widget_opener").addEventListener("click", function() {
     myUploadWidget = cloudinary.openUploadWidget({ 
       cloudName: 'dxxy1fbq1', uploadPreset: 'default-preset'}, (error, result) => { 
-
-        console.log("Result :" , result);
-
         let uploadedImage = (result.info.url);
 
-        
-        
-
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`).addClass("uploadedImage")
         //Call FaceApi
      
 
         const faceAPI = function (uploadedImage) {
             const imageURL = uploadedImage
-            console.log(imageURL);
 
             const queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=Ev9zIZLIwjiT5zSHtXHBYRJTZaaEcHpL&api_secret=lfu6EgDOwcUhGoeM0uVmMi0Io_qM2re_&image_url=" + imageURL + "&return_attributes=emotion";
             $.ajax({
@@ -36,6 +29,7 @@ var myUploadWidget;
                 const surprise = (response.faces[0].attributes.emotion.surprise);
 
                 var chart = new CanvasJS.Chart("chartContainer", {
+                    theme: "dark2",
                     animationEnabled: true,
                     title: {
                         text: "Emotion Results"
@@ -104,14 +98,16 @@ const displayInfo = function (movieId) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        
-        // $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
-        $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
-        $('#bg').html("");
+
+        $('#resultBottom').append(`<br />`)
+        $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%; background-color: black; color: black;"></div>`)
+        $('#bg').empty("");
         $('#mainMovie').html("");
-        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="width:100%" alt="${response.results[0].title}">`);
+        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="height: 100%;" alt="${response.results[0].title}">`);
         $('#mainMovieInfo').html("");
         $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>Summary: ${response.results[0].overview}</p>`);
-
+        for (let i = 1; i < 10; i++) {
+            $('#movieList').append(`<div class="row"><div class="col-6 d-flex flex-row-reverse"><img src="http://image.tmdb.org/t/p/w342${response.results[i].poster_path}" style="width: 50%; height: 100%;"></div><div class="col-3"><h3>${response.results[i].title}</h3><p>${response.results[i].overview}</p></div></div><br />`);
+        }
         })
 }

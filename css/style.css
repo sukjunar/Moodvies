@@ -1,22 +1,13 @@
-/* background */
-#backgroundVid {
-    background-position: relative;
-    z-index: -300;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  
-}
 #overlay {
-    position: fixed;  
+    /* position: relative;   */
     width: 100%; 
     height: 100%; 
-    top: 0; 
+    top: 0px; 
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;    
+    z-index: 2;
+    padding: 0;    
 }
 /* header*/
 .bg-light {
@@ -35,16 +26,13 @@
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.1rem;
-    margin-left: 600px;
     color: white;
-    left: 25px;
 }
 .header_content-text {
     font-size: 38px;
     color: white;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
-    text-align: center;
-    background-image: linear-gradient(black, red);
+    position: relative;
 }
 .headerImg {
     display: inline;
@@ -56,12 +44,24 @@ p {
     font-size: 24px;
 }
 /* button*/
-button {
-    position: relative;
-    height: 100px;
-    padding: 12px;
-    background-color: yellow;
-    border: 2px solid blue;
+#upload {
+    background-color: black;
+    text-align: center;
+}
+#title {
+    text-decoration: none;
+    color: white;
+}
+
+/* background */
+#backgroundVid {
+    background-position: 100%;
+    z-index: -300;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  
 }
  /* #upload {
    position: relative;
@@ -72,11 +72,11 @@ button {
 .card {
     margin: 20px;
 }
+
+
   /*footer*/
   footer {
-    height: 50px;
-    position: fixed;
-    bottom: 0px;
+    height: 50px;  
     width:100%;
     text-align: center;
     background-image: linear-gradient(red, black);
@@ -84,7 +84,28 @@ button {
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     /* background-image: linear-gradient(black,red, yellow, blue); */
 }
+.db {
+    display: none;
+}
 
+#resultTop, #resultBottom {
+    color: white;
+    background-color: black;
+}
+
+body {
+    background-color: black;
+}
+
+br {
+    background-color: black;
+}
+.CloseButton.dn.db-ns.btn-close-popup.pointer.absolute {
+    visibility: hidden;
+}
+#upload_widget_opener {
+    text-align: center;
+}
 
 @media screen and (max-width: 500px) {
     .header {
