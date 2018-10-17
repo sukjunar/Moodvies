@@ -98,10 +98,7 @@ const displayInfo = function (movieId) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        for (let i = 1; i < 10; i++) {
-            $('#movieList').append(`<div class="row"><div class="col-6 d-flex flex-row-reverse"><img src="http://image.tmdb.org/t/p/w342${response.results[i].poster_path}"></div><div class="col-3"><h3>${response.results[i].title}</h3><p>${response.results[i].overview}</p></div></div><br />`);
 
-        }
         $('#resultBottom').append(`<br />`)
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%; background-color: black; color: black;"></div>`)
         $('#bg').empty("");
@@ -109,6 +106,8 @@ const displayInfo = function (movieId) {
         $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="height: 100%;" alt="${response.results[0].title}">`);
         $('#mainMovieInfo').html("");
         $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>Summary: ${response.results[0].overview}</p>`);
-
+        for (let i = 1; i < 10; i++) {
+            $('#movieList').append(`<div class="row"><div class="col-6 d-flex flex-row-reverse"><img src="http://image.tmdb.org/t/p/w342${response.results[i].poster_path}" style="width: 50%; height: 100%;"></div><div class="col-3"><h3>${response.results[i].title}</h3><p>${response.results[i].overview}</p></div></div><br />`);
+        }
         })
 }
