@@ -1,6 +1,6 @@
 /* background */
 #backgroundVid {
-    background-position: 100%;
+    background-position: relative;
     z-index: -300;
   min-width: 100%;
   min-height: 100%;
@@ -44,6 +44,7 @@
     color: white;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     text-align: center;
+    background-image: linear-gradient(black, red);
 }
 .headerImg {
     display: inline;
@@ -51,15 +52,22 @@
     width: 65px;
     padding: 5px;
 }
+p {
+    font-size: 24px;
+}
 /* button*/
 button {
     position: relative;
+    height: 100px;
+    padding: 12px;
+    background-color: yellow;
+    border: 2px solid blue;
 }
-/* #upload {
+ /* #upload {
    position: relative;
     top: 330px;
-    left: 380px; */
-/* } */
+    left: 380px; 
+ } */
 /* each section header and body*/
 .card {
     margin: 20px;
@@ -67,20 +75,17 @@ button {
   /*footer*/
   footer {
     height: 50px;
-    position: static;
+    position: fixed;
     bottom: 0px;
     width:100%;
     text-align: center;
-    background-image: linear-gradient(black, red);
+    background-image: linear-gradient(red, black);
     color: whitesmoke;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     /* background-image: linear-gradient(black,red, yellow, blue); */
 }
 
-#mainMovie {
-    color: white;
-    background-color: black;
-}
+
 @media screen and (max-width: 500px) {
     .header {
       float: none;
