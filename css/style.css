@@ -28,7 +28,6 @@
     z-index: 10;
     background-image: linear-gradient(black, red);
     padding: 10px;
-    
   }
 
 /* title name and images*/
@@ -39,9 +38,6 @@
     margin-left: 600px;
     color: white;
     left: 25px;
-    
-    
-    
 }
 .header_content-text {
     font-size: 38px;
@@ -59,10 +55,10 @@
 button {
     position: relative;
 }
-#upload {
+/* #upload {
    position: relative;
     top: 330px;
-    left: 380px;
+    left: 380px; */
 }
 /* each section header and body*/
 .card {
@@ -71,15 +67,19 @@ button {
   /*footer*/
   footer {
     height: 50px;
-    position: relative;
-    bottom:0px;
+    position: static;
+    bottom: 0px;
     width:100%;
     text-align: center;
-     background-image: linear-gradient(black, red);
+    background-image: linear-gradient(black, red);
     color: whitesmoke;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
-    
     /* background-image: linear-gradient(black,red, yellow, blue); */
+}
+
+#mainMovie {
+    color: white;
+    background-color: black;
 }
 @media screen and (max-width: 500px) {
     .header {
