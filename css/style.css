@@ -106,15 +106,19 @@ body {
 br {
     background-color: black;
 }
-.CloseButton.dn.db-ns.btn-close-popup.pointer.absolute {
-    visibility: hidden;
-}
 #upload_widget_opener {
     text-align: center;
 }
-.poster {
-    height: 5%;
-    width: 5%;
+#poster {
+    width: 342px;
+    height: 513px;
+}
+#mainPoster {
+    width: 500px;
+    height: 750px;
+}
+#uploadButton:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
