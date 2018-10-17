@@ -1,18 +1,8 @@
-/* background */
-#backgroundVid {
-    background-position: 100%;
-    z-index: -300;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  
-}
 #overlay {
-    position: fixed;  
+    /* position: relative;   */
     width: 100%; 
     height: 100%; 
-    top: 0; 
+    top: 0px; 
     left: 0;
     right: 0;
     bottom: 0;
@@ -43,7 +33,8 @@
     font-size: 38px;
     color: white;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
-    text-align: center;
+    position: relative;
+    right: 150px;
 }
 .headerImg {
     display: inline;
@@ -54,6 +45,18 @@
 /* button*/
 button {
     position: relative;
+    left: 440px;
+}
+
+/* background */
+#backgroundVid {
+    background-position: 100%;
+    z-index: -300;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  
 }
 /* #upload {
    position: relative;
@@ -64,11 +67,11 @@ button {
 .card {
     margin: 20px;
 }
+
+
   /*footer*/
   footer {
-    height: 50px;
-    position: static;
-    bottom: 0px;
+    height: 50px;  
     width:100%;
     text-align: center;
     background-image: linear-gradient(black, red);
@@ -76,6 +79,15 @@ button {
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     /* background-image: linear-gradient(black,red, yellow, blue); */
 }
+.uploadedImage {
+    position: relative;
+    top: 40px;
+
+}
+.db {
+    display: none;
+}
+
 
 #mainMovie {
     color: white;

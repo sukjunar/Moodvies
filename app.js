@@ -14,7 +14,7 @@ var myUploadWidget;
         
         
 
-        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
+        $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`).addClass("uploadedImage")
         //Call FaceApi
      
 
@@ -104,6 +104,13 @@ const displayInfo = function (movieId) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
+        for (let i = 1; i < 10; i++) {
+            let poster = (`<img src="http://image.tmdb.org/t/p/w500${response.results[i].poster_path}" style="width:50%"`);
+            $('#movieList').append(`<div>${poster}</div>`);
+            $('#movieList').append(`<p><b>${response.results[i].title}<b></p>`);
+            $('#movieList').append(`<p>Summary: ${response.results[0].overview}</p>`);
+
+        }
         
         // $('#userPic').html(`<img src="${uploadedImage}" alt="Uploaded Image" style="width:100%;">`)
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%;"></div>`)
