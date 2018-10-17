@@ -103,15 +103,16 @@ const displayInfo = function (movieId) {
         method: 'GET'
     }).then(function (response) {
 
+        console.log(response);
         $('#resultBottom').append(`<br />`)
         $('#pieChart').html(`<div id="chartContainer" style="height: 300px; width: 100%; background-color: black; color: black;"></div>`)
         $('#bg').empty("");
         $('#mainMovie').html("");
-        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="height: 100%;" alt="${response.results[0].title}">`);
+        $('#mainMovie').html(`<img src="http://image.tmdb.org/t/p/w500${response.results[0].poster_path}" style="width: 100%; height: 100%;" alt="${response.results[0].title}">`);
         $('#mainMovieInfo').html("");
-        $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h2>Release Date: ${response.results[0].release_date}</h2><p>Summary: ${response.results[0].overview}</p>`);
+        $('#mainMovieInfo').html(`<h1>${response.results[0].title}</h1><p>Rating: ${response.results[0].vote_average}</p><h3>Release Date: ${response.results[0].release_date}</h3><p>Summary: ${response.results[0].overview}</p>`);
         for (let i = 1; i < 10; i++) {
-            $('#movieList').append(`<div class="row"><div class="col-6 d-flex flex-row-reverse"><img src="http://image.tmdb.org/t/p/w342${response.results[i].poster_path}" style="width: 50%; height: 100%;"></div><div class="col-3"><h3>${response.results[i].title}</h3><p>${response.results[i].overview}</p></div></div><br />`);
+            $('#movieList').append(`<div class="row"><div class="col-6 poster d-flex flex-row-reverse"><img src="http://image.tmdb.org/t/p/w342${response.results[i].poster_path}" style="width: 50%; height: 100%;"></div><div class="col-3"><h3>${response.results[i].title}</h3><h4>${response.results[i].release_date}</h4><p>${response.results[i].overview}</p></div></div><br />`);
         }
     })
 }
