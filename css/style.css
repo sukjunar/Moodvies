@@ -6,7 +6,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;    
+    z-index: 2;
+    padding: 0;    
 }
 /* header*/
 .bg-light {
@@ -34,7 +35,8 @@
     color: white;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     position: relative;
-    right: 150px;
+    text-align: center;
+    background-image: linear-gradient(black, red);
 }
 .headerImg {
     display: inline;
@@ -42,10 +44,25 @@
     width: 65px;
     padding: 5px;
 }
+p {
+    font-size: 24px;
+}
 /* button*/
 button {
-    position: relative;
-    left: 440px;
+    height: 100px;
+    padding: 12px;
+    background-color: yellow;
+    border: 2px solid blue;
+}
+#upload {
+    background-color: black;
+    text-align: center;
+    
+}
+#title {
+    text-decoration: none;
+    color: white;
+    
 }
 
 /* background */
@@ -54,10 +71,11 @@ button {
     z-index: -300;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   
 }
+<<<<<<< HEAD
 button.css-1p1djze min-close-btn ml6 pointer BUTTON outline-0 flex-nowrap items-center justify-center pointer fw6 c-menu-icons min-close-btn ml6 pointer {
    display: none; 
 }
@@ -68,6 +86,8 @@ button.css-1p1djze min-close-btn ml6 pointer BUTTON outline-0 flex-nowrap items-
     top: 330px;
     left: 380px; */
 /* } */
+=======
+>>>>>>> 8393b482a662cd6059bf9fe4730da2d13a10ad8a
 /* each section header and body*/
 .card {
     margin: 20px;
@@ -79,25 +99,34 @@ button.css-1p1djze min-close-btn ml6 pointer BUTTON outline-0 flex-nowrap items-
     height: 50px;  
     width:100%;
     text-align: center;
-    background-image: linear-gradient(black, red);
+    background-image: linear-gradient(red, black);
     color: whitesmoke;
     text-shadow: 3px 0 black, 0 4px black, 3px 0 black, 0 4px black;
     /* background-image: linear-gradient(black,red, yellow, blue); */
-}
-.uploadedImage {
-    position: relative;
-    top: 40px;
-
 }
 .db {
     display: none;
 }
 
-
-#mainMovie {
+#resultTop, #resultBottom {
     color: white;
     background-color: black;
 }
+
+body {
+    background-color: black;
+}
+
+br {
+    background-color: black;
+}
+.CloseButton.dn.db-ns.btn-close-popup.pointer.absolute {
+    visibility: hidden;
+}
+#upload_widget_opener {
+    text-align: center;
+}
+
 @media screen and (max-width: 500px) {
     .header {
       float: none;

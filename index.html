@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moodvies</title>
+  <link rel="icon" href="./images/movie_reel.ico" type="image/jpg" sizes="16x16">
   <!-- ajax libraries-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -29,44 +30,43 @@
   <div class="container-fluid" id="overlay">
 
     <!--header with title-->
-    <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">
-        <h1 class="header_content-text"><img src="./images/Movie_reel.ico" class="headerImg" /><b>MOODVIES</b>
-          <img src="./images/Movie_reel.ico" class="headerImg" /></h1>
-      </span>
-    </nav>
+    <div class = "page-header">
+   
+      <h1 class="header_content-text"><img src="./images/Movie_reel.ico" class="headerImg" /><b>
+        MOODVIES </b>
+        <img src="./images/Movie_reel.ico" class="headerImg" /> <small><p>Upload your photo to reveal a movie based off your mood</p></small></h1>
+     
+   </div>
     <!--Upload Button-->
     <div class="row">
       <!--widget button-->
       <div class="col-lg-12" id="upload">
-        <button>
-          <a href="#" id="upload_widget_opener"><b>Click to find out your movie genre based on your mood</b></a>
+        <button class="mx-auto">
+          <a href="#" class="mx-auto" id="upload_widget_opener"><b>Click Here!</b></a>
         </button>
         <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
       </div>
     </div>
 
     <!-- User photo section-->
-    <div class="row">
-      <div class="col-lg-4" id="userPic">
+    <div class="row" id="resultTop">
+      <div class="col-6" id="userPic">
       </div>
-      <!-- emptyDiv -->
-      <div class="col-lg-4"></div>
-
       <!-- Section to display piechart-->
-      <div class="col-lg-4" id="chartContainer" style="height: 300px; width: 100%;"></div>
-
-
+      <div class="col-6" id="chartContainer"></div>
     </div>
 
-
     <!--Section to display the main movie pick-->
-    <div class="row">
-      <div class="col-lg-4" id="mainMovie">
+    <div class="row" id="resultBottom">
+      <div class="col-2">
       </div>
-      <div class="col-lg-4" id="mainMovieInfo">
+      <div class="col-4 d-flex flex-row-reverse" id="mainMovie">
       </div>
-      <div class="col-lg-4" id="movieList">
+      <div class="col-4" id="mainMovieInfo">
+      </div>
+      <div class="col-12" id="movieList">
+        <div class="row">
+        </div>
       </div>
 
     </div>
