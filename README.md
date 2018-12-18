@@ -1,15 +1,18 @@
 
 # MOODVIES 
-MVP (Minimum Viable Product)
-1. Takes in user input and makes a Face++ API call for the face mood recognition.
-2. Takes the movie lists and uses OMDb API (or the TMDB or Rotten Tomatoes).
-3. Displays the mood and movie option information onto HTML.
 
-# User Stories
-1. "As a user I want to be able to upload my image to see the mood of my face."
-2. "As a user I want to be able to decide which movie to watch based on my mood."
-3. "As a user I want to be able to see the details of the movies based on my mood."
 
+## Moodvies is a web application that makes movie suggestions based on your mood.
+![](https://thumbs.gfycat.com/NearIncompleteBoa-size_restricted.gif)
+
+The application allows users to take a photo or upload a photo for analysis using cloudinary. 
+The user photo is then analyzed using the Face++ API which issues a percentage of emotion values. 
+Those values are used to calculate an appropriate movie selection using the movie genre tags from the TMDB API.
+
+Our development team created an easy and eye-catching one page user interface for the photo upload 
+and a movie suggestion page with up to 10 results.
+![](https://thumbs.gfycat.com/ShorttermSpanishHammerheadshark-size_restricted.gif)
+ 
 # Web Developers:  
 Sareka Belnavis
 Pamela Anderson
@@ -17,4 +20,5 @@ Jessica McCormack
 Wayne Sukjune Hong
 Cynthia Knox
 
+Try it yourself! 
 https://sukjunar.github.io/Moodvies/
